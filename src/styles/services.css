@@ -1,0 +1,251 @@
+.services-section {
+  position: relative;
+  padding: 6rem 0;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  margin-bottom: 1rem;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon > div {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+/* AI Agents Icon */
+.icon-agents {
+  border: 2px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon-agents::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  top: 8px;
+  left: 12px;
+}
+
+.icon-agents::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background-color: white;
+  border-radius: 10px;
+  bottom: 5px;
+  left: 8px;
+}
+
+/* Custom Solutions Icon */
+.icon-solutions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-solutions::before,
+.icon-solutions::after {
+  content: '';
+  width: 100%;
+  height: 8px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.icon-solutions::before {
+  box-shadow: 0 14px 0 white;
+}
+
+/* Integration Icon */
+.icon-integration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-integration::before,
+.icon-integration::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.icon-integration::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0;
+}
+
+.icon-integration::after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: 0;
+  box-shadow: 0 0 0 3px var(--primary-teal);
+}
+
+/* Consulting Icon */
+.icon-consulting {
+  background-color: transparent;
+  position: relative;
+}
+
+.icon-consulting::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 3px;
+  left: 8px;
+  top: 3px;
+}
+
+.icon-consulting::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: white;
+  top: 10px;
+  left: 12px;
+  box-shadow: 0 5px 0 white, 0 10px 0 white;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+
+.service-card p {
+  color: var(--medium-gray);
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--medium-gray);
+}
+
+.feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+}
+
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape-1 {
+  top: 10%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 127, 42, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.shape-2 {
+  bottom: 10%;
+  right: 5%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 127, 42, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.shape-3 {
+  top: 40%;
+  right: 15%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255, 127, 42, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+@media (max-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+} 

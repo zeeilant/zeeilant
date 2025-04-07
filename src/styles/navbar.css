@@ -1,0 +1,147 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  background-color: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(18, 18, 18, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.logo-z {
+  color: var(--primary-orange);
+  font-weight: 800;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-burger {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-orange);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menu-burger.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-burger.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  color: var(--dark-gray);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-orange);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 1;
+  }
+
+  .mobile-menu li {
+    margin: 0.5rem 0;
+    padding: 0.5rem 2rem;
+    text-align: center;
+  }
+
+  .mobile-menu .button {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+} 

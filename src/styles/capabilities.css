@@ -1,0 +1,350 @@
+.capabilities {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--black);
+  overflow: hidden;
+  padding: 120px 0;
+}
+
+.parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.parallax-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 127, 42, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 127, 42, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(1000px) rotateX(60deg) scale(1.5);
+  transform-origin: center top;
+  opacity: 0.4;
+}
+
+.parallax-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 127, 42, 0.4) 0%, rgba(255, 127, 42, 0.1) 40%, transparent 70%);
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+.capabilities-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.capabilities-title h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.capabilities-title p {
+  font-size: 1.3rem;
+  color: var(--white);
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.capabilities-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .capabilities-content {
+   margin-top: 40%;
+   
+  }
+}
+
+.capabilities-image {
+  flex: 1;
+  position: relative;
+  height: 500px;
+}
+
+.orange-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(225deg, var(--primary-orange), var(--dark-orange));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(2px);
+  box-shadow: 0 0 80px rgba(255, 127, 42, 0.5);
+}
+
+.capabilities-visual {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+  background-color: rgba(18, 18, 18, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.code-animation {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.code-line {
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary-orange), transparent);
+  border-radius: 4px;
+  animation: codeLine 2s infinite;
+  opacity: 0.7;
+}
+
+.code-line:nth-child(2) {
+  width: 80%;
+  animation-delay: 0.2s;
+}
+
+.code-line:nth-child(3) {
+  width: 60%;
+  animation-delay: 0.4s;
+}
+
+.code-line:nth-child(4) {
+  width: 75%;
+  animation-delay: 0.6s;
+}
+
+.code-line:nth-child(5) {
+  width: 45%;
+  animation-delay: 0.8s;
+}
+
+@keyframes codeLine {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.capabilities-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.capability-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  margin-top: 20%;
+}
+
+
+@media (max-width: 992px) {
+  .capability-card {
+    margin-top: 20%;
+  }
+}
+
+
+.capability-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.capability-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-icon {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.ai-brain::before,
+.ai-brain::after {
+  content: '';
+  position: absolute;
+  background-color: var(--white);
+}
+
+.ai-brain::before {
+  width: 20px;
+  height: 15px;
+  border-radius: 10px;
+  top: 5px;
+  left: 5px;
+}
+
+.ai-brain::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  bottom: 2px;
+  left: 10px;
+}
+
+.ai-code::before,
+.ai-code::after {
+  content: '';
+  position: absolute;
+  background-color: var(--white);
+}
+
+.ai-code::before {
+  width: 20px;
+  height: 2px;
+  top: 8px;
+  left: 5px;
+  box-shadow: 0 6px 0 var(--white), 0 12px 0 var(--white), 0 18px 0 var(--white);
+}
+
+.ai-code::after {
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  right: 3px;
+  top: 11px;
+}
+
+.ai-growth::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  bottom: 3px;
+  left: 3px;
+}
+
+.ai-growth::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: var(--white);
+  transform: rotate(-45deg);
+  top: 5px;
+  right: 8px;
+  box-shadow: -4px -4px 0 1px var(--white);
+}
+
+.capability-text h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.capability-text p {
+  color: var(--light-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .capabilities {
+    padding: 80px 0;
+  }
+  
+  .capabilities-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .capabilities-image {
+    height: 400px;
+    width: 100%;
+  }
+  
+  .capabilities-items {
+    width: 100%;
+  }
+  
+  .orange-circle {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .capabilities-visual {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .capabilities-title h2 {
+    font-size: 2rem;
+  }
+  
+  .capabilities-title p {
+    font-size: 1.1rem;
+  }
+  
+  .capability-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .orange-circle {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .capabilities-visual {
+    width: 180px;
+    height: 180px;
+  }
+} 

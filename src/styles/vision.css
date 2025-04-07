@@ -1,0 +1,144 @@
+.vision {
+  position: relative;
+  background-color: var(--black);
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.vision-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+}
+
+.vision-quote-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.vision-quote {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.quote-mark {
+  position: absolute;
+  top: -3rem;
+  left: -2rem;
+  font-size: 12rem;
+  font-family: var(--font-heading);
+  color: rgba(255, 127, 42, 0.1);
+  line-height: 1;
+}
+
+.vision-quote h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--white);
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.quote-author {
+  margin-top: 2rem;
+  color: var(--primary-orange);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.vision-philosophy {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.vision-philosophy h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.vision-philosophy p {
+  color: var(--light-gray);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.philosophy-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.philosophy-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.philosophy-item .number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-orange);
+  opacity: 0.8;
+}
+
+.philosophy-item .text {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.vision-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+  opacity: 0.3;
+}
+
+@media (max-width: 992px) {
+  .vision {
+    padding: 80px 0;
+  }
+  
+  .vision-content {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .vision-quote {
+    padding-left: 0;
+  }
+  
+  .quote-mark {
+    top: -2rem;
+    left: -1rem;
+    font-size: 8rem;
+  }
+  
+  .vision-philosophy {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .philosophy-items {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .vision-philosophy h3 {
+    font-size: 1.75rem;
+  }
+  
+  .quote-mark {
+    top: -1.5rem;
+    left: -0.5rem;
+    font-size: 6rem;
+  }
+} 
