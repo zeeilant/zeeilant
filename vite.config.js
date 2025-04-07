@@ -12,5 +12,10 @@ export default defineConfig({
       '.ngrok-free.app' // This will allow all ngrok-free.app subdomains
     ]
   },
-  base: '/zeeilant-website/', // Replace with your repository name
+  base: '/zeeilant-website/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: true
+  }
 })
