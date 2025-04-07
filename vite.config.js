@@ -11,5 +11,6 @@ export default defineConfig({
       '003c-49-36-26-12.ngrok-free.app',
       '.ngrok-free.app' // This will allow all ngrok-free.app subdomains
     ]
-  }
+  },
+  base: '/zeeilant-website/', // Replace with your repository name
 })
