@@ -4,31 +4,31 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const testimonials = [
   {
     id: 1,
-    quote: "Zeeilant's AI solutions transformed our business operations. Their custom implementation reduced our development time by 75% while increasing accuracy.",
-    author: "Sarah Johnson",
-    position: "CTO, TechVision Inc.",
-    company: "TechVision"
+    quote: "Working with Zeeilant was refreshingly straightforward. No tech jargon, no unnecessary complexity – just intelligent solutions delivered on time and on budget.",
+    author: "Khushi",
+    position: "Founder, KASOS.",
+    company: "KASOS"
   },
   {
     id: 2,
-    quote: "Working with Zeeilant gave us a competitive edge. Their AI agents understand our business context and deliver results that feel like they come from team members who've been with us for years.",
-    author: "Michael Chen",
-    position: "Director of Innovation, Apex Solutions",
-    company: "Apex Solutions"
+    quote: "As a non-technical founder, I was worried about communicating my vision effectively. The team at Zeeilant made the entire process painless and even enjoyable.",
+    author: "Bobby Ran",
+    position: "Founder, Dxer Studio",
+    company: "Dxer Studio"
   },
   {
     id: 3,
-    quote: "The level of sophistication in Zeeilant's AI technology is unmatched. Their solutions helped us process data 10x faster with 30% more accuracy than our previous systems.",
+    quote: "Zeeilant transformed our outdated website into a powerful business tool in half the time we expected. Their combination of technical expertise and business understanding made all the difference.",
     author: "Emma Rodriguez",
     position: "Head of R&D, Nexus Group",
     company: "Nexus Group"
   },
   {
     id: 4,
-    quote: "We approached Zeeilant with a complex challenge that other vendors said was impossible. Within weeks, their team delivered a solution that exceeded our expectations and transformed our workflow.",
-    author: "David Wilson",
-    position: "CEO, Innovate Partners",
-    company: "Innovate Partners"
+    quote: "Zeeilant's AI solutions transformed our business operations. Their custom implementation reduced our development time by 75% while increasing accuracy.",
+    author: "Rahul",
+    position: "Trainer, Rahul's Fitness",
+    company: "Rahul's Fitness"
   }
 ];
 
@@ -150,10 +150,10 @@ const Testimonials = () => {
           style={{ opacity, y: useTransform(scrollYProgress, [0, 1], [50, -50]) }}
         >
           <div className="company-logos">
-            <div className="company-logo">TechVision</div>
-            <div className="company-logo">Apex</div>
-            <div className="company-logo">Nexus</div>
-            <div className="company-logo">Innovate</div>
+            <div className="company-logo">Dxer Studio</div>
+            <div className="company-logo">KASOS</div>
+            <div className="company-logo">Nexus Group</div>
+            <div className="company-logo">Rahul's Fitness</div>
           </div>
         </motion.div>
       </div>

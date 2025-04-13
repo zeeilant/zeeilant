@@ -222,6 +222,8 @@
   margin-top: 3rem;
 }
 
+ 
+
 .scroll-indicator-top .scroll-text {
   font-size: 0.9rem;
   color: var(--white);
@@ -230,6 +232,7 @@
   margin-bottom: 1rem;
   opacity: 0.8;
 }
+
 
 .scroll-indicator-top .scroll-line {
   width: 80px;
@@ -657,6 +660,17 @@
   border-bottom: 2px solid var(--primary-orange);
   transform: rotate(45deg);
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .scroll-arrow {
+    margin-right: 35rem;
+  }
+}
+@media (max-width: 576px) {
+  .forsmall-text {
+    display: none;
+  }
 }
 
 .scroll-text {

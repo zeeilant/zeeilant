@@ -154,12 +154,13 @@
 .testimonial-arrows {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .testimonial-arrow {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  /* width: 50px;
+  height: 50px; */
+  border-radius: 40%;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;

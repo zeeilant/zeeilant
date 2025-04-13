@@ -22,7 +22,7 @@ const Innovation = () => {
             className="innovation-text"
             style={{ y: y1, opacity }}
           >
-            <h2 className="text-gradient">Beyond Conventional AI</h2>
+            <h2 className="text-gradient">Who We Are!</h2>
             <p className="highlight">We're not just using AI—we're redefining it.</p>
             
             <div className="innovation-stats">
@@ -43,28 +43,28 @@ const Innovation = () => {
             </div>
             
             <p className="description">
-              Through our revolutionary AI-powered workflow, we deliver solutions that would normally take months in just days. Our proprietary techniques combine machine learning, knowledge engineering, and advanced automation to create systems that understand context, adapt to changing requirements, and consistently deliver exceptional results.
+            At Zeeilant, we're not just another tech company. We're a small, nimble team of developers who believe that advanced technology should work for everyone – not just tech giants with unlimited resources.Zeeilant combines creative problem-solving with modern development approaches to deliver custom software solutions that would typically require much larger teams and budgets.
             </p>
             
             <div className="innovation-features">
               <div className="feature">
                 <div className="feature-icon"></div>
-                <span>Adaptive Learning</span>
+                <span>Your Friendly Neighborhood</span>
               </div>
               
               <div className="feature">
                 <div className="feature-icon"></div>
-                <span>Contextual Understanding</span>
+                <span>When you need us, we're here</span>
               </div>
               
               <div className="feature">
                 <div className="feature-icon"></div>
-                <span>Human-AI Collaboration</span>
+                <span>We're try to use AI to make your life easier</span>
               </div>
               
               <div className="feature">
                 <div className="feature-icon"></div>
-                <span>Future-Proof Solutions</span>
+                <span>Together we can make a amazing product</span>
               </div>
             </div>
           </motion.div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import zeeilantlogo from '../assets/images/zeeilantlogo.jpeg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,19 +12,25 @@ const Footer = () => {
           <div className="footer-logo-container">
             <motion.div 
               className="footer-logo"
-              whileHover={{ scale: 1.05 }}
             >
-              <span className="logo-z">Z</span>eeilant
+              <Link to="/" className="footer-logo-link">
+                <img 
+                  src={zeeilantlogo} 
+                  alt="Zeeilant Logo" 
+                  className="footer-logo-image"
+                  style={{ width: '20%', height: '20%', borderRadius: '50%' }}
+                />
+              </Link>
             </motion.div>
           </div>
           
           <div className="footer-contact">
-            <a href="mailto:info@zeeilant.com" className="footer-email">info@zeeilant.com</a>
+            <a href="mailto:info@zeeilant.com" className="footer-email">wecare@zeeilant.com</a>
           </div>
           
           <div className="footer-social">
             <motion.a 
-              href="https://twitter.com" 
+              href="https://x.com/zeeilant" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -33,7 +40,7 @@ const Footer = () => {
               <div className="social-icon twitter-icon"></div>
             </motion.a>
             <motion.a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/company/zeeilant/" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -43,14 +50,14 @@ const Footer = () => {
               <div className="social-icon linkedin-icon"></div>
             </motion.a>
             <motion.a 
-              href="https://github.com" 
+              href="https://www.instagram.com/zeeilant/" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              aria-label="GitHub"
+              aria-label="Instagram"
             >
-              <div className="social-icon github-icon"></div>
+              <div className="social-icon instagram-icon"></div>
             </motion.a>
           </div>
         </div>

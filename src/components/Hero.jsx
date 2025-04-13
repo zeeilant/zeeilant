@@ -1,10 +1,12 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import ParticlesBackground from './ParticlesBackground';
+import ContactPopup from './ContactPopup';
 
 const Hero = () => {
   const heroRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
   
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -43,6 +45,14 @@ const Hero = () => {
         duration: 0.8,
       }
     })
+  };
+
+  const scrollToAiCapabilities = () => {
+    
+    window.scrollTo({
+      top: 1000,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -87,9 +97,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ y: titleY }}
+            style={{ y: titleY , fontSize: '2.5rem'}}
+            
           >
-            Redefining the Future<br/>with Intelligent AI
+            Smart Solutions, Exceptional Results:<br/> Software That Works As Hard As You Do
           </motion.h1>
           
           <motion.p
@@ -97,7 +108,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            We're creating next-generation AI tools that amplify human potential. Our solutions help visionary companies build faster, smarter, and more intuitively.
+            Custom web apps, websites, and SaaS solutions built by developers who understand your business needs.
           </motion.p>
           
           <motion.div 
@@ -108,15 +119,19 @@ const Hero = () => {
           >
             <div className="tagline-item">
               <span className="tagline-icon"></span>
-              <span className="tagline-text">Premium AI Solutions</span>
+              <span className="tagline-text">AI Agents</span>
             </div>
             <div className="tagline-item">
               <span className="tagline-icon"></span>
-              <span className="tagline-text">Enterprise Integration</span>
+              <span className="tagline-text">Custom Website Development</span>
             </div>
             <div className="tagline-item">
               <span className="tagline-icon"></span>
-              <span className="tagline-text">Future-Proof Technology</span>
+              <span className="tagline-text">SaaS Solutions</span>
+            </div>
+            <div className="tagline-item">
+              <span className="tagline-icon"></span>
+              <span className="tagline-text">Maintenance & Support / Consultation</span>
             </div>
           </motion.div>
           
@@ -130,6 +145,7 @@ const Hero = () => {
               className="button-primary forsmall"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={scrollToAiCapabilities}
             >
               Explore Solutions
             </motion.button>
@@ -137,8 +153,9 @@ const Hero = () => {
               className="button-secondary forsmall"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setShowContactForm(true)}
             >
-              Watch Demo
+              Contact Us
             </motion.button>
           </motion.div>
           
@@ -276,9 +293,10 @@ const Hero = () => {
           duration: 2,
           ease: "easeInOut"
         }}
+        
       >
         <div className="scroll-arrow"></div>
-        <div className="scroll-text">Scroll Down</div>
+        <div className="scroll-text forsmall-text">Scroll Down</div>
       </motion.div>
       
       {/* Digital metrics animation */}
@@ -311,6 +329,12 @@ const Hero = () => {
           <span className="metric-label">Support</span>
         </motion.div>
       </div>
+
+      {/* Replace the old contact form with ContactPopup */}
+      <ContactPopup 
+        isOpen={showContactForm} 
+        onClose={() => setShowContactForm(false)} 
+      />
     </section>
   );
 };

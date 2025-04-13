@@ -30,8 +30,8 @@ const AiCapabilities = () => {
           className="capabilities-title"
           style={{ opacity: opacity1, y: y1 }}
         >
-          <h2 className="text-gradient">Crafting the Future of AI</h2>
-          <p>We're building powerful AI solutions that push the boundaries of what's possible</p>
+          <h2 className="text-gradient"> Why Choose Zeeilant?</h2>
+          <p>We're building powerful AI solutions that support your business needs</p>
         </motion.div>
         
         <div className="capabilities-content">
@@ -60,8 +60,8 @@ const AiCapabilities = () => {
                 <div className="ai-icon ai-brain"></div>
               </div>
               <div className="capability-text">
-                <h3>Intelligent AI Agents</h3>
-                <p>Our autonomous AI agents work seamlessly to solve complex problems, automating workflows and accelerating productivity.</p>
+                <h3>Speed Without Sacrifice</h3>
+                <p>Our optimized development process means we can deliver quality work in a fraction of the time it would take traditional agencies.</p>
               </div>
             </motion.div>
             
@@ -73,8 +73,8 @@ const AiCapabilities = () => {
                 <div className="ai-icon ai-code"></div>
               </div>
               <div className="capability-text">
-                <h3>Custom AI Solutions</h3>
-                <p>We create tailored AI implementations that integrate with your existing systems, delivering results that matter to your business.</p>
+                <h3>Budget-Friendly Innovation</h3>
+                <p>You don't need a Fortune 500 budget to get Fortune 500 quality. Our efficient approach makes advanced technology accessible..</p>
               </div>
             </motion.div>
             
@@ -86,8 +86,8 @@ const AiCapabilities = () => {
                 <div className="ai-icon ai-growth"></div>
               </div>
               <div className="capability-text">
-                <h3>Accelerated Development</h3>
-                <p>Our AI-powered development tools help teams build robust, scalable solutions in a fraction of the time.</p>
+                <h3>Future-Proof Solutions</h3>
+                <p>We build with scalability in mind, so your digital assets can grow alongside your business..</p>
               </div>
             </motion.div>
           </div>

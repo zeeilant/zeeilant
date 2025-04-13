@@ -36,10 +36,9 @@ const Vision = () => {
           >
             <h3 className="text-gradient">Our Philosophy</h3>
             <p>
-              We believe that AI should enhance human potential, not replace it. 
-              Every solution we build is designed to augment your existing 
-              workflows and empower your team to achieve more than ever before.
-            </p>
+            We don't just build software; we build relationships. When you work with Zeeilant, you're partnering with people who genuinely care about your success. Our streamlined development process means we can work faster and smarter, but every line of code still benefits from human oversight and ingenuity.
+
+What makes us different? We're transparent, we speak in plain language (not tech jargon), and we're committed to making technology that actually makes your life easier.            </p>
             
             <div className="philosophy-items">
               <div className="philosophy-item">

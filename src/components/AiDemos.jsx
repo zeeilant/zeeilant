@@ -1,24 +1,44 @@
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import ContactPopup from './ContactPopup';
+
 
 const demos = [
   {
     id: 1,
-    title: "Intelligent Document Analysis",
-    description: "Our AI system processes complex documents and extracts structured data in seconds, reducing manual work by 95%.",
+    title: "Understand",
+    description: "We dive deep into your business goals, user needs, and competitive landscape before writing a single line of code.",
     icon: "document"
   },
   {
     id: 2,
-    title: "Real-time Decision Engine",
-    description: "Make data-driven decisions with our AI engine that processes thousands of variables to deliver actionable insights.",
+    title: "Design",
+    description: "Our creative design process generates concepts that we refine with your feedback to ensure they meet your business objective.",
     icon: "decision"
   },
   {
     id: 3,
-    title: "Generative Assistant",
-    description: "Experience our AI assistant that understands context, learns preferences, and provides personalized responses.",
+    title: "Develop",
+    description: "We write clean, efficient code while leveraging modern tools to accelerate development – giving you more bang for your buck.",
     icon: "assistant"
+  },
+  {
+    id: 4,
+    title: "Test",
+    description: "Rigorous testing ensures your product doesn't just work – it excels.",
+    icon: "test"
+  },
+  {
+    id: 5,
+    title: "Deploy",
+    description: "We handle the technical details of deployment so you can focus on what you do best.",
+    icon: "deploy"
+  },
+  {
+    id: 6,
+    title: "Maintain",
+    description: "Technology is never done.We'll help you continuously improve based on real user feedback.",
+    icon: "Maintain"
   }
 ];
 
@@ -26,7 +46,9 @@ const AiDemos = () => {
   const [activeDemo, setActiveDemo] = useState(demos[0].id);
   const sectionRef = useRef(null);
   const demoRef = useRef(null);
-  
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"]
@@ -101,6 +123,110 @@ const AiDemos = () => {
             </div>
           </div>
         );
+      case 4:
+        return (
+          <div className="demo-visual test-demo">
+            <div className="test-container">
+              <div className="test-header">
+                <div className="test-dot"></div>
+                <div className="test-dot"></div>
+                <div className="test-dot"></div>
+              </div>
+              <div className="test-messages">
+                <div className="test-message user">Running comprehensive test suite...</div>
+                <div className="test-message ai">
+                  <div className="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div className="message-text">Test results: 98% coverage achieved. All critical paths verified.</div>
+                </div>
+              </div>
+              <div className="test-visualization">
+                <div className="test-graph">
+                  <div className="graph-bar success" style={{ height: '98%' }}></div>
+                  <div className="graph-bar warning" style={{ height: '2%' }}></div>
+                </div>
+                <div className="test-metrics">
+                  <div className="metric success">
+                    <span className="metric-value">98%</span>
+                    <span className="metric-label">Coverage</span>
+                  </div>
+                  <div className="metric warning">
+                    <span className="metric-value">2%</span>
+                    <span className="metric-label">Issues</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      case 5:
+        return (
+          <div className="demo-visual deploy-demo">
+            <div className="deploy-container">
+              <div className="deploy-header">
+                <div className="deploy-progress">
+                  <div className="circular-progress" style={{ '--progress': '75%' }}>
+                    <span>75%</span>
+                  </div>
+                </div>
+                <div className="deploy-steps">
+                  <div className="step completed">
+                    <div className="step-icon">✓</div>
+                    <div className="step-label">Prepared</div>
+                  </div>
+                  <div className="step completed">
+                    <div className="step-icon">✓</div>
+                    <div className="step-label">Built</div>
+                  </div>
+                  <div className="step active">
+                    <div className="step-icon">⌛</div>
+                    <div className="step-label">Deploying</div>
+                  </div>
+                </div>
+              </div>
+              <div className="deploy-status">
+                <div className="status-bar">
+                  <div className="status-progress" style={{ width: '75%' }}></div>
+                </div>
+                <div className="status-message">Deploying to production environment...</div>
+              </div>
+            </div>
+          </div>
+        );  
+      case 6:
+        return (
+          <div className="demo-visual maintain-demo">
+            <div className="maintain-container">
+              <div className="health-grid">
+                <div className="health-metric">
+                  <div className="metric-value">98.9%</div>
+                  <div className="metric-label">Uptime</div>
+                  <div className="metric-progress success" style={{ width: '98.9%' }}></div>
+                </div>
+                <div className="health-metric">
+                  <div className="metric-value">24ms</div>
+                  <div className="metric-label">Response</div>
+                  <div className="metric-progress warning" style={{ width: '85%' }}></div>
+                </div>
+                <div className="health-metric">
+                  <div className="metric-value">1.2M</div>
+                  <div className="metric-label">Requests</div>
+                  <div className="metric-progress success" style={{ width: '92%' }}></div>
+                </div>
+              </div>
+              <div className="system-status">
+                <div className="status-indicator active"></div>
+                <div className="status-details">
+                  <h4>System Health</h4>
+                  <p>All systems operational</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
       default:
         return null;
     }
@@ -115,8 +241,8 @@ const AiDemos = () => {
           className="demos-title"
           style={{ opacity, y }}
         >
-          <h2 className="text-gradient">AI in Action</h2>
-          <p>Experience the power of our intelligent solutions</p>
+          <h2 className="text-gradient">How We Work</h2>
+          <p>We're a team of experienced developers and designers who are passionate about building products that help businesses grow.(click on process)</p>
         </motion.div>
         
         <motion.div 
@@ -175,11 +301,16 @@ const AiDemos = () => {
             className="button-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setIsPopupOpen(true)}
           >
-            Schedule a Demo
+            Need Consultation
           </motion.button>
         </motion.div>
       </div>
+      <ContactPopup 
+        isOpen={isPopupOpen} 
+        onClose={() => setIsPopupOpen(false)} 
+      />
     </section>
   );
 };

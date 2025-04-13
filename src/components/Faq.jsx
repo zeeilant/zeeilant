@@ -1,37 +1,40 @@
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import ContactPopup from './ContactPopup';
+import '../styles/faq.css';
 
 const faqItems = [
   {
     id: 1,
-    question: "How does Zeeilant implement AI solutions for businesses?",
-    answer: "We take a consultative approach, first understanding your specific business challenges and objectives. Our team then designs custom AI solutions using a combination of cutting-edge models, proprietary algorithms, and integration frameworks. Each implementation follows our proven methodology: consultation, design, development, integration, testing, deployment, and ongoing optimization."
+    question: "I don't have a clear idea of what I need. Can you still help?",
+    answer: "Absolutely! Many of our clients come to us with business problems rather than specific technical requirements. We'll work together to define your needs and find the right solution – whether that's a simple website or a complex custom application."
   },
   {
     id: 2,
-    question: "What industries does Zeeilant specialize in?",
-    answer: "While our AI solutions are adaptable across sectors, we have deep expertise in financial services, healthcare, manufacturing, retail, and technology. Our specialized knowledge in these areas allows us to understand industry-specific challenges and create AI systems that address unique regulatory, operational, and competitive factors."
+    question: "Do I need to understand technology to work with you?",
+    answer: "Not at all. We speak human first, tech second. We'll explain everything in plain language and handle all the technical details so you don't have to."
   },
   {
     id: 3,
-    question: "How long does it typically take to implement an AI solution?",
-    answer: "Implementation timelines vary based on project complexity and scope. Simple AI integrations can be completed in 2-4 weeks, while comprehensive enterprise solutions typically require 2-6 months. Our agile methodology ensures you see progressive results throughout the development process, with regular deployments of functional components."
+    question: "How much does a project typically cost?",
+    answer: "Every project is unique, so costs vary based on complexity, timeline, and specific requirements. We're transparent about pricing and will provide a detailed estimate before any work begins. What we can promise: you'll get excellent value for your investment."
   },
   {
     id: 4,
-    question: "What kind of ROI can we expect from your AI solutions?",
-    answer: "Our clients typically experience ROI in multiple dimensions: cost reduction (20-50% for automated processes), productivity increases (30-80% for augmented workflows), error reduction (up to 90% in critical operations), and new revenue opportunities. We work with you to establish clear baseline metrics and track improvements across relevant KPIs specific to your business objectives."
+    question: "How long does a typical project take?",
+    answer: "Our streamlined development process allows us to work significantly faster than traditional methods. A standard website might take 2-4 weeks, while more complex applications could require 8-12 weeks. We'll provide a timeline estimate during our initial consultation."
   },
   {
     id: 5,
-    question: "How does Zeeilant handle data privacy and security?",
-    answer: "We implement comprehensive security measures at every level of our AI solutions. This includes data encryption (at rest and in transit), secure development practices, regular security audits, and compliance with industry standards (GDPR, HIPAA, etc.). We can deploy solutions in your existing secure infrastructure or provide secure cloud environments based on your requirements."
+    question: "Can you help with ongoing maintenance after launch?",
+    answer: "Definitely! We offer flexible maintenance packages to keep your digital assets secure, up-to-date, and performing optimally."
   }
 ];
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const sectionRef = useRef(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -101,12 +104,18 @@ const Faq = () => {
               className="button-primary"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => setIsPopupOpen(true)}
             >
               Contact Us
             </motion.button>
           </div>
         </motion.div>
       </div>
+
+      <ContactPopup 
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </section>
   );
 };
