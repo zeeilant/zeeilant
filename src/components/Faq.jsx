@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import ContactPopup from './ContactPopup';
 import '../styles/faq.css';

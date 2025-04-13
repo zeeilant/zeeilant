@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import ParticlesBackground from './ParticlesBackground';
@@ -35,17 +36,7 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const textRevealVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.2 + (i * 0.1),
-        duration: 0.8,
-      }
-    })
-  };
+  
 
   const scrollToAiCapabilities = () => {
     

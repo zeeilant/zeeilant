@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import ContactPopup from './ContactPopup';
 
@@ -46,7 +47,6 @@ const AiDemos = () => {
   const [activeDemo, setActiveDemo] = useState(demos[0].id);
   const sectionRef = useRef(null);
   const demoRef = useRef(null);
-  const [showContactForm, setShowContactForm] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({

@@ -28,7 +28,6 @@ import './styles/floating-button.css';
 import './styles/cursor.css';
 import './styles/ChatBot.css';
 import './styles/contact-popup.css';
-import { useState } from 'react';
 
 
 
