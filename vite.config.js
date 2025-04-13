@@ -9,10 +9,14 @@ export default defineConfig({
     port: 5173,
     allowedHosts: [
       '003c-49-36-26-12.ngrok-free.app',
-      '.ngrok-free.app' // This will allow all ngrok-free.app subdomains
+      '.ngrok-free.app',
+      'localhost',
+      '127.0.0.1',
+      'zeeilant.com',
+      'https://zeeilant.github.io/zeeilant/'
     ]
   },
-  base: '/zeeilant-website/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
